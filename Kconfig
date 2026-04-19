@@ -1,0 +1,20 @@
+# Video capture configuration for Smart Presence Wakeup
+#
+# Copyright (c) 2025
+# SPDX-License-Identifier: Apache-2.0
+
+mainmenu "VL53L5CX Smart Presence Wakeup"
+
+menu "Video capture configuration"
+
+config VIDEO_WIDTH
+	int "Define the width of the video"
+	default 320
+
+config VIDEO_HEIGHT
+	int "Define the height of the video"
+	default 240
+
+endmenu
+
+source "Kconfig.zephyr"

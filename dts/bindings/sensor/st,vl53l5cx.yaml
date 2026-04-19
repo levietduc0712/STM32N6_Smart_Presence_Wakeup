@@ -1,0 +1,21 @@
+# Copyright (c) 2024 STMicroelectronics
+# SPDX-License-Identifier: Apache-2.0
+
+description: STMicroelectronics VL53L5CX multizone Time-of-Flight sensor
+
+compatible: "st,vl53l5cx"
+
+include: [sensor-device.yaml, i2c-device.yaml]
+
+properties:
+  int-gpios:
+    type: phandle-array
+    description: |
+      Optional interrupt (GPIO1) pin. Active LOW.
+      Used for detection threshold interrupts.
+
+  lpn-gpios:
+    type: phandle-array
+    description: |
+      Optional Low Power enable pin. Active HIGH.
+      Used to reset or power-cycle the sensor.

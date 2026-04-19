@@ -1,0 +1,16 @@
+/*
+ * Smart Presence Wakeup — Board Overlay
+ *
+ * Adds the VL53L5CX ToF sensor to the csi_i2c bus (I2C1).
+ * The camera (IMX335) and CSI pipeline are provided by the
+ * --shield st_b_cams_imx_mb1854 flag at build time.
+ */
+
+/* VL53L5CX on the same I2C bus as the camera (I2C1: PH9/PC1) */
+&csi_i2c {
+	vl53l5cx: vl53l5cx@29 {
+		compatible = "st,vl53l5cx";
+		reg = <0x29>;
+		status = "okay";
+	};
+};
